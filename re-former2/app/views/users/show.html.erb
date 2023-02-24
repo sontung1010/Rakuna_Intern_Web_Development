@@ -1,0 +1,50 @@
+<h1>Hello <%= @user.fname %> <%= @user.lname %></h1>
+
+<p>Username: <%= @user.username %></p>
+
+<p>Email address: <%= @user.email %></p>
+
+<p>Phone number: <%= @user.phone %></p>
+
+<p>Birthday: <%= @user.birthday %></p>
+
+<p>Gender: <%= @user.gender %></p>
+
+<p>Occupation: <%= @user.occupation %></p>
+
+<p>Social media: <%= @user.social_media %></p>
+
+<p>Portfolio: <%= @user.myfile %></p>
+
+<ul>
+  <li><%= link_to "Edit your account information", edit_user_path(@user) %></li>
+  <li><%= link_to "Delete account", user_path(@user),
+    method: :delete,
+    data: { confirm: "Are you sure to delete your account?" } %></li>
+</ul>
+
+
+
+<h2><%= @user.fname %>'s Posts</h2>
+
+<%= render @user.posts %>
+
+
+<h2>Add a post:</h2>
+<%= form_with model: [ @user, @user.posts.build ] do |form| %>
+  <p>
+    <%= form.label "Title:" %><br>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label "Content:" %><br>
+    <%= form.text_area :body %>
+  </p>
+
+  <p>
+    <%= form.submit "Submit" %>
+  </p>
+<% end %>
+
+<%= link_to "Back", root_path %>

@@ -1,0 +1,109 @@
+<%= form_with model: user do |form| %>
+  <p>Basic information:</p>
+  <p>
+    <%= form.label "First name:" %>
+    <%= form.text_field :fname %>
+    <% user.errors.full_messages_for(:fname).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label "Last name:" %>
+    <%= form.text_field :lname %>
+    <% user.errors.full_messages_for(:lname).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label "Username:" %>
+    <%= form.text_field :username %>
+    <% user.errors.full_messages_for(:username).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label "Password:" %>
+    <%= form.password_field :pwd %>
+    <% user.errors.full_messages_for(:pwd).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label "Email:" %>
+    <%= form.email_field :email %>
+    <% user.errors.full_messages_for(:email).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label "Phone:" %>
+    <%= form.telephone_field :phone %>
+    <% user.errors.full_messages_for(:phone).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label "Birthday:" %>
+    <%= form.date_field :birthday %>
+    <% user.errors.full_messages_for(:birthday).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </p>
+
+  <p>Gender:</p>
+  <%= form.radio_button :gender, "male" %>
+  <%= form.label :male, "Male" %>
+  <%= form.radio_button :gender, "female" %>
+  <%= form.label :female, "Female" %>
+  <%= form.radio_button :gender, "other" %>
+  <%= form.label :other, "Other" %>
+
+  <p>I am a/an:</p>
+  <%= form.radio_button :occupation, "high school student" %>
+  <%= form.label :high_school_student, "High School Student" %><br>
+  <%= form.radio_button :occupation, "college student" %>
+  <%= form.label :college_student, "College Student" %><br>
+  <%= form.radio_button :occupation, "Intern" %>
+  <%= form.label :intern, "Intern" %><br>
+  <%= form.radio_button :occupation, "freelancer" %>
+  <%= form.label :freelancer, "Freelancer" %><br>
+  <%= form.radio_button :occupation, "employed" %>
+  <%= form.label :employed, "Employed" %><br>
+
+  <p>
+    <%= form.label "Social media address:" %>
+    <%= form.url_field :social_media %>
+    <% user.errors.full_messages_for(:social_media).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </p>
+
+  <p>Please insert your portfolio file below:</p>
+
+  <p>
+  <%= form.file_field :myfile %>
+  <% user.errors.full_messages_for(:myfile).each do |message| %>
+    <div><%= message %></div>
+  <% end %>
+  </p>
+
+  <p>Or upload it from:</p>
+
+  <p>
+  <%= form.url_field :myfile %>
+  <% user.errors.full_messages_for(:myfile).each do |message| %>
+    <div><%= message %></div>
+  <% end %>
+  </p>
+
+  <p>
+    <%= form.submit "Submit"%>
+  </p>
+
+<% end %>

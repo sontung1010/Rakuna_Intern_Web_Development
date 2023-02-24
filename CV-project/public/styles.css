@@ -1,0 +1,320 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #D5D8DC;
+  font-family: 'Poppins', sans-serif;
+  color: #212F3C;
+}
+
+hr {
+  border: 1px dashed rgba(15, 16, 21, 0.4);
+  width: 95%;
+}
+
+a {
+  color: #212F3C;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header .fa-github {
+  font-size: 2.5rem;
+  margin-top: 10px;
+}
+
+header .title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 10px;
+}
+
+header .fa-address-card {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+main {
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+  background: #EAEDED;
+  border-radius: 10px;
+
+  -webkit-box-shadow: 8px 6px 10px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    8px 6px 10px 0px rgba(50, 50, 50, 0.75);
+  box-shadow:         8px 6px 10px 0px rgba(50, 50, 50, 0.75);
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+}
+
+button:focus {
+  oultine: none;
+}
+
+.personal {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.personal-info {
+  padding: 20px 0 0 20px;
+}
+
+.personal-info * {
+  margin-bottom: 10px;
+}
+
+.personal-info h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.personal-info input {
+  font-family: inherit;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 10px;
+}
+
+.personal-info input:focus, .contact input:focus {
+  outline: none;
+  box-shadow: 0 0 3px black;
+}
+
+.contact {
+  padding: 20px 50px 0 0;
+}
+
+.contact * {
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.contact input {
+  font-family: inherit;
+  font-size: 1rem;
+  width: 130px;
+  border: none;
+  border-radius: 6px;
+}
+
+
+.education, .expertise, .skills {
+  width: 100%;
+  padding: 10px 20px 10px 20px;
+}
+
+.qual-card, .job-card {
+  margin: 0 auto 15px auto;
+  padding-left: 15px;
+  width: 95%;
+  display: flex;
+  justify-content: flex-start;
+  border-left: 1px dotted rgba(15, 16, 21, 0.4);
+}
+
+.school-details {
+  width: 50%;
+}
+
+.school-details *, .job-details * {
+  margin-bottom: 5px;
+}
+
+.qual-details {
+  width: 40%;
+}
+
+.qual-details *, .job-desc * {
+  margin-bottom: 5px;
+}
+
+.job-details {
+  width: 30%;
+}
+
+.job-desc {
+  width: 60%;
+}
+
+.delete-container {
+  margin: auto;
+  width: 10%;
+  font-size: 1.3rem;
+  opacity: 0.7;
+}
+
+.delete-container .fa {
+  cursor: pointer;
+}
+
+.education-form, .experience-form {
+  display: flex;
+  flex-direction: column;
+  flex-flow: row wrap;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill-card {
+  margin: 0 10px 10px 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background: rgba(97, 106, 107, 0.5);
+  border-radius: 10px;
+}
+
+.skill-card .skill-name {
+  margin-right: 5px;
+}
+
+.form-control {
+  width: 100%;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control.w-50 {
+  width: 50%;
+}
+
+.form-control label {
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  font-family: inherit;
+  font-size: 1.05rem;
+  border-radius: 4px;
+  border: 1px solid rgba(97, 106, 107, 0.5);
+}
+
+.form-control.w-50 input {
+  width: 55px;
+}
+
+.form-control input:focus, .form-control textarea:focus {
+  outline: none;
+  box-shadow: 0 0 3px black;
+}
+
+.form-control.buttons {
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.form-control textarea {
+  height: 100px;
+  font-family: inherit;
+  border-radius: 4px;
+  border: 1px solid rgba(97, 106, 107, 0.5);
+}
+
+.skill-form .form-control input{
+  width: 150px;
+}
+
+button {
+  padding: 8px;
+  font-size: 1.06rem;
+  border-radius: 20px;
+  color: #2C3E50;
+  background: rgba(97, 106, 107, 0.5);
+  border: rgba(97, 106, 107, 0.5);
+  cursor: pointer;
+}
+
+button.submit {
+  background: rgba(28, 130, 71, 0.5);
+  border: rgba(28, 130, 71, 0.5);
+}
+
+button.cancel {
+  background: rgba(231, 77, 60, 0.6);
+  border: rgba(231, 77, 60, 0.6);
+}
+
+.hidden {
+   display: none;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+  }
+
+  header .fa-github {
+    margin-top: 0;
+    font-size: 1.75rem;
+  }
+
+  header .title {
+    font-size: 2rem;
+  }
+
+  header .fa-address-card {
+    margin-bottom: 0;
+    font-size: 1.75rem;
+  }
+
+  main {
+    width: 90%;
+  }
+
+  .personal-info h1 {
+    font-size: 1.75rem;
+  }
+
+  .personal-info h5 {
+    margin-top: 20px;
+  }
+
+  .personal-info input {
+    font-size: 1.5rem;
+    width: 150px;
+  }
+
+  .contact {
+    padding-right: 25px;
+  }
+
+  .qual-card, .job-card {
+    margin: 0 0 15px 0;
+  }
+
+  .school-details p, .qual-details p, .job-details p, .job-desc p {
+    font-size: 0.8rem;
+  }
+
+}
